@@ -492,6 +492,7 @@ a:hover {
   margin: 0 auto;
   position: relative;
   z-index: 2;
+  padding: 0 1.15rem;
 }
 
 .productData .photoGallery .prodPageSwiper .swiper-wrapper {
@@ -560,12 +561,24 @@ a:hover {
   position: absolute;
   top: 0;
   right: -2px;
-  width: 18%;
+  width: 16%;
   z-index: 2;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(transparent), to(#fff));
   background: -o-linear-gradient(left, transparent, #fff 100%);
   background: linear-gradient(90deg, transparent, #fff 100%);
+}
+
+.productData .photoGallery .prodPageSwiper .shadowlineStart {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 16%;
+  z-index: 2;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), to(#fff));
+  background: -o-linear-gradient(right, transparent, #fff 100%);
+  background: linear-gradient(270deg, transparent, #fff 100%);
 }
 
 .options_wrapper {
