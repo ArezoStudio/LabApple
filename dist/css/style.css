@@ -1117,6 +1117,11 @@ a:hover {
   border: none;
 }
 
+#tradeData .nav-tabs li {
+  background-color: #FAFAFA;
+  border-radius: 0.5rem;
+}
+
 #tradeData .nav-tabs li a {
   padding: 1rem 1rem;
   display: -webkit-box;
@@ -1129,15 +1134,39 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #FAFAFA;
-  border-radius: 0.5rem;
   text-decoration: none;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#tradeData .nav-tabs li a img {
-  width: 80%;
+#tradeData .nav-tabs li a .img__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#tradeData .nav-tabs li a .img__wrapper img {
+  aspect-ratio: 1/1;
+  width: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: auto;
   margin-bottom: 0.75rem;
+  max-height: 200px;
 }
 
 #tradeData .nav-tabs li a span {
@@ -1151,6 +1180,7 @@ a:hover {
 
 #tradeData .nav-tabs li a.active {
   background-color: #F9F6F1;
+  border-radius: 0.5rem;
 }
 
 #params .tab-content:first-child {
@@ -1201,6 +1231,7 @@ a:hover {
 #params .tab_wrapper .sideLeft .product__img img {
   width: 70%;
   height: auto;
+  max-width: 100px;
 }
 
 #params .tab_wrapper .sideLeft .product__params {
@@ -1245,6 +1276,7 @@ a:hover {
   -webkit-transition: ease-in 0.5s;
   -o-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
+  align-items: center;
   text-align: center;
   cursor: pointer;
   line-height: 100%;
@@ -1302,6 +1334,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 #params .tab_wrapper .sideRight .step .option__wrapper .option__text p {
@@ -1309,6 +1342,49 @@ a:hover {
   line-height: 125%;
   font-weight: 700;
   margin: 0;
+}
+
+#params .tab_wrapper .sideRight .step .option__wrapper .option__text p .tool {
+  font-size: 12px;
+  display: inline-block;
+  line-height: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: #121213;
+  border-radius: 999px;
+  color: #fff;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+#params .tab_wrapper .sideRight .step .option__wrapper .option__text .tool__wrapper {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding: 1rem;
+  bottom: 40px;
+  background-color: #fff;
+  -webkit-filter: drop-shadow(0px 0px 48px rgba(0, 0, 0, 0.12));
+          filter: drop-shadow(0px 0px 48px rgba(0, 0, 0, 0.12));
+  border-radius: 0.25rem;
+  -webkit-transition: ease-in 0.5s;
+  -o-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+}
+
+#params .tab_wrapper .sideRight .step .option__wrapper .option__text .tool__wrapper p {
+  max-width: 300px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+#params .tab_wrapper .sideRight .step .option__wrapper .option__text .tool__wrapper.active {
+  -webkit-transition: ease-in 0.5s;
+  -o-transition: ease-in 0.5s;
+  transition: ease-in 0.5s;
+  visibility: visible;
+  opacity: 1;
 }
 
 #params .tab_wrapper .sideRight .step .option__wrapper .option__text span {
@@ -1462,6 +1538,10 @@ a:hover {
   font-size: calc(22px + 10 * ((100vw - 320px) / 1040));
   font-weight: 700;
   line-height: 125%;
+}
+
+#tradein .tradein .tradeModal__wrapper form .checkbox_label {
+  margin-top: 20px;
 }
 
 .container {
@@ -2024,10 +2104,16 @@ a:hover {
     position: relative;
   }
 
-  #params .tab_wrapper .sideRight .step .option__wrapper .option__text .btn-tool {
-    position: absolute;
-    top: -3px;
-    right: 0px;
+  #params .tab_wrapper .sideRight .step .option__wrapper .option__text p .tool {
+    margin-left: 0.25rem;
+  }
+
+  #params .tab_wrapper .sideRight .step .option__wrapper .option__text .tool__wrapper {
+    bottom: 36px;
+  }
+
+  #params .tab_wrapper .sideRight .step .option__wrapper .option__text .tool__wrapper p {
+    max-width: inherit;
   }
 
   #params .tab_wrapper .sideRight .step .option__wrapper .option__values {
@@ -2196,29 +2282,7 @@ a:hover {
     color: #fff;
   }
 
-  #tradeData .nav-tabs li a:hover {
-    background-color: #F9F6F1;
-  }
-
   #params .tab_wrapper .sideRight .step .option__wrapper .option__text .btn-tool:hover {
     background-color: #232323;
-  }
-
-  #params .tab_wrapper .sideRight .step .option__wrapper .option__values .option:hover {
-    background-color: #F9F6F1;
-    border: 1px solid #F9F6F1;
-    -webkit-filter: drop-shadow(0px 0px 48px rgba(0, 0, 0, 0.12));
-            filter: drop-shadow(0px 0px 48px rgba(0, 0, 0, 0.12));
-    color: #121213;
-  }
-
-  #params .tab_wrapper .sideRight .step .showmore:hover {
-    background-color: #232323;
-    border: 1px solid #232323;
-    color: #fff;
-  }
-
-  #params .tab_wrapper .sideRight .step .orderArea .btn-order:hover {
-    background-color: #390651;
   }
 }
