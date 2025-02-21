@@ -793,8 +793,8 @@ a:hover {
           align-items: stretch;
   -ms-flex-line-pack: center;
       align-content: center;
-  -ms-grid-column-span: 6;
-  grid-column: span 6;
+  -ms-grid-column-span: 5;
+  grid-column: span 5;
 }
 
 .priceAction .priceActionElement .priceData {
@@ -853,8 +853,8 @@ a:hover {
 }
 
 .priceAction .priceActionElement.last {
-  -ms-grid-column-span: 4;
-  grid-column: span 4;
+  -ms-grid-column-span: 3;
+  grid-column: span 3;
 }
 
 .priceSubtext {
@@ -2196,6 +2196,26 @@ a:hover {
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1320px) {
+  .priceAction .priceActionElement {
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
+
+  .priceAction .priceActionElement .priceData {
+    gap: 1.25rem;
+  }
+
+  .priceAction .priceActionElement .priceData .subinfo .mobile {
+    display: none;
+  }
+
+  .priceAction .priceActionElement.last {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
   }
 }
 
