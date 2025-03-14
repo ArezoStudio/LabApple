@@ -1570,6 +1570,130 @@ a:hover {
   margin: 0 auto;
 }
 
+#serviceScreens {
+  padding: 2.5rem 0 2.5rem 0;
+}
+
+.serviceScreens__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0;
+}
+
+.serviceScreens__wrapper .serviceScreenShop,
+.serviceScreens__wrapper .serviceScreenService {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .inner__wrapper,
+.serviceScreens__wrapper .serviceScreenService .inner__wrapper {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: -o-linear-gradient(310deg, black 15%, #555555 100%);
+  background: linear-gradient(140deg, black 15%, #555555 100%);
+  height: 420px;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper,
+.serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper {
+  width: 100%;
+  max-width: 420px;
+  z-index: 1;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper h2,
+.serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper h2 {
+  font-size: calc(24px + 8 * ((100vw - 320px) / 1040));
+  color: #fff;
+  line-height: 110%;
+  margin-bottom: 1rem;
+  word-break: auto-phrase;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper p,
+.serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper p {
+  color: #fff;
+  font-size: calc(13px + 1 * ((100vw - 320px) / 1040));
+  font-weight: 200;
+  width: 100%;
+  max-width: 310px;
+  line-height: 135%;
+  word-break: auto-phrase;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .inner__wrapper .actions,
+.serviceScreens__wrapper .serviceScreenService .inner__wrapper .actions {
+  z-index: 1;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .inner__wrapper .actions .servBtn,
+.serviceScreens__wrapper .serviceScreenService .inner__wrapper .actions .servBtn {
+  position: relative;
+  display: inline-block;
+  background-color: #000000;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1040));
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .bgImg,
+.serviceScreens__wrapper .serviceScreenService .bgImg {
+  position: absolute;
+  bottom: -3rem;
+  right: 2rem;
+  width: 70%;
+  max-width: 345px;
+  z-index: 0;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper img {
+  width: auto;
+  height: auto;
+  max-width: 80px;
+  max-height: 24px;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper img:nth-child(2) {
+  margin-top: 3px;
+}
+
+.serviceScreens__wrapper .serviceScreenShop .bgImg {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 2rem;
+  width: 90%;
+  max-width: 360px;
+}
+
 @media (min-width: 1200px) {
   .container,
   .container-lg,
@@ -2210,6 +2334,77 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #serviceScreens {
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  .serviceScreens__wrapper {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper {
+    padding: 24px;
+    height: 320px;
+    max-height: 300px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper {
+    max-width: 90%;
+    z-index: 1;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper h2,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper h2 {
+    line-height: 105%;
+    margin-bottom: 0.5rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper p,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper p {
+    width: 100%;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .actions .servBtn,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .actions .servBtn {
+    padding: 1rem 1.25rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .bgImg,
+  .serviceScreens__wrapper .serviceScreenService .bgImg {
+    position: absolute;
+    bottom: -2rem;
+    right: 1rem;
+    width: 50%;
+    max-width: 345px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper {
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper img {
+    max-width: 60px;
+    max-height: 20px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper img:nth-child(2) {
+    margin-top: 3px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .bgImg {
+    bottom: -0.25rem;
+    right: -1rem;
+    width: 60%;
+    max-width: 360px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .productData .photoGallery {
     padding: 0 0 0.5rem 0;
@@ -2326,6 +2521,77 @@ a:hover {
   .productData .photoGallery .prodPageSwiper2 .swiper-pagination {
     bottom: 0;
     left: 0;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 992px) {
+  #serviceScreens {
+    padding: 1.5rem 0 1.5rem 0;
+  }
+
+  .serviceScreens__wrapper {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper {
+    padding: 24px;
+    height: 320px;
+    max-height: 300px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper {
+    max-width: 90%;
+    z-index: 1;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper h2,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper h2 {
+    line-height: 105%;
+    margin-bottom: 0.5rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .headArea__wrpaper p,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .headArea__wrpaper p {
+    width: 100%;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .inner__wrapper .actions .servBtn,
+  .serviceScreens__wrapper .serviceScreenService .inner__wrapper .actions .servBtn {
+    padding: 1rem 1.25rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .bgImg,
+  .serviceScreens__wrapper .serviceScreenService .bgImg {
+    position: absolute;
+    bottom: -2rem;
+    right: 1rem;
+    width: 50%;
+    max-width: 345px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper {
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper img {
+    max-width: 60px;
+    max-height: 20px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .headArea__wrpaper .logo__wrapper img:nth-child(2) {
+    margin-top: 3px;
+  }
+
+  .serviceScreens__wrapper .serviceScreenShop .bgImg {
+    bottom: -0.25rem;
+    right: -1rem;
+    width: 60%;
+    max-width: 360px;
   }
 }
 
